@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotificationStartSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3S-iG-uYA">
+                                <rect key="frame" x="134.5" y="318.5" width="106" height="30"/>
+                                <state key="normal" title="Set Notification"/>
+                                <connections>
+                                    <action selector="tappedSetNotificationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HoX-x4-Zn5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s3S-iG-uYA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CK6-KX-BIG"/>
+                            <constraint firstItem="s3S-iG-uYA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JS8-qD-288"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="22L-uo-PhU" kind="presentation" identifier="toLocal" id="6uj-4D-xjn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="131"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="52d-ur-ktd">
+            <objects>
+                <viewController id="22L-uo-PhU" customClass="NextViewController" customModule="NotificationStartSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ik-eK-nFU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0N-lv-t7z">
+                                <rect key="frame" x="170.5" y="587" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="22L-uo-PhU" eventType="touchUpInside" id="ulF-zX-3LA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ローカル通知からの起動" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lni-lH-C6V">
+                                <rect key="frame" x="92" y="323" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hNR-ff-v9V" firstAttribute="bottom" secondItem="Q0N-lv-t7z" secondAttribute="bottom" constant="50" id="iix-Rv-zsB"/>
+                            <constraint firstItem="Lni-lH-C6V" firstAttribute="centerX" secondItem="3ik-eK-nFU" secondAttribute="centerX" id="jlG-dC-eyc"/>
+                            <constraint firstItem="Q0N-lv-t7z" firstAttribute="centerX" secondItem="3ik-eK-nFU" secondAttribute="centerX" id="mnC-fO-Yeq"/>
+                            <constraint firstItem="Lni-lH-C6V" firstAttribute="centerY" secondItem="3ik-eK-nFU" secondAttribute="centerY" id="ogW-nN-6xW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hNR-ff-v9V"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zR4-Sr-VeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="131"/>
+        </scene>
+    </scenes>
+</document>
