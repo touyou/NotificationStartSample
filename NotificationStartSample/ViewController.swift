@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class ViewController: UIViewController, UNUserNotificationCenterDelegate {
+class ViewController: UIViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
